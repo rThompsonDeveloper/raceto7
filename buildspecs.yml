@@ -10,6 +10,8 @@ phases:
     commands:
       # install dependencies
       - npm i
+      - cd client
+      - npm i
   build:
     commands:
       - npm start
@@ -17,6 +19,7 @@ phases:
       - npm build
 artifacts:
     files:
+      - server.js
       - "**/*"
       discard-paths: no
       base-directory: client/dist
